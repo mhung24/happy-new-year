@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+#main {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.player_price {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.income > p,
+.svip > p,
+.tax > p,
+.discount > p,
+.player_price > p {
+  font-size: 18px;
+  width: 150px;
+  text-align: start;
+}
+
+.tax > input,
+.player_price > input {
+  padding: 4px 8px;
+  outline: none;
+}
+
+.tax {
+  margin-top: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.svip {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#main > button {
+  padding: 4px 6px;
+  margin-top: 15px;
+}
+
+.discount {
+  margin-top: 10px;
+  display: flex;
+  text-align: center;
+}
+
+.svip > select,
+.discount > select {
+  padding: 4px 8px;
+  outline: none;
+}
+
+.sum {
+  margin-top: 20px;
+  font-size: 20px;
+  display: flex;
+}
+
+.sum > p {
+  margin-right: 10px;
+}
+
+.list {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#ds {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#ds > div {
+  display: flex;
+  margin-top: 8px;
+}
+
+#ds > div > p {
+  margin-right: 6px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.income {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#tax {
+  color: red;
+}
+
+table {
+  margin-top: 15px;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+tr,
+td,
+th {
+  padding: 6px 10px;
+}
+
+td:first-child {
+  text-align: center;
+}
+
+td:last-child {
+  display: flex;
+  justify-content: center;
+  border: none;
+}
+
+td:last-child > button {
+  padding: 6px 12px;
+}

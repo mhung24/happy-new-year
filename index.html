@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div class="player_price">
+        <p>Giá cầu thủ</p>
+        <input type="number" id="price" autofocus />
+      </div>
+      <div class="tax">
+        <p>Hoa hồng 40%</p>
+        <span id="tax">0</span>
+        <!-- <input type="text" disabled id="tax" /> -->
+      </div>
+      <div class="discount">
+        <p>Giảm giá</p>
+        <select name="" id="discount">
+          <option value="0">CP 0%</option>
+          <option value="30">CP 30%</option>
+          <option value="20">CP 20%</option>
+          <option value="10">CP 10%</option>
+        </select>
+      </div>
+
+      <div class="svip">
+        <p>Svip</p>
+        <select name="" id="svip">
+          <option value="0">Không có</option>
+          <option value="20">SVIP 20%</option>
+          <option value="10">VIP 10%</option>
+        </select>
+      </div>
+
+      <div class="income">
+        <p>Thu nhập</p>
+        <p id="income">0</p>
+      </div>
+
+      <button onclick="addDataPrice()">Thêm</button>
+
+      <div class="sum">
+        <p>Tổng:</p>
+        <p id="sumArray">0</p>
+      </div>
+      <div class="list">
+        <p>Danh sách ct</p>
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Giá</th>
+              <th onclick="deleteAll()">Xoá tất cả</th>
+            </tr>
+          </thead>
+          <tbody id="list"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
