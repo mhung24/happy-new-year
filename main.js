@@ -9,6 +9,9 @@
   const showMsg = $(".msg");
 
   //=====< Danh sách phần thưởng >=====
+
+  // Chọn checkbox tự động
+
   const listGift = [
     {
       text: "20K",

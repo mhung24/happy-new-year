@@ -2360,6 +2360,21 @@ function startTyping() {
   type(text); // Gọi hàm đánh máy với chuỗi mới
 }
 
+function goFullScreen() {
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) {
+    // Firefox
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) {
+    // Chrome, Safari và Opera
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) {
+    // IE/Edge
+    document.documentElement.msRequestFullscreen();
+  }
+}
+
 const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
@@ -2367,7 +2382,8 @@ const handleClick = () => {
     container.style.display = "flex";
     wrap_input.style.display = "none";
     nameRd.innerHTML = `Hi ${username.value}`;
-
+    document.documentElement.requestFullscreen();
+    goFullScreen();
     startTyping();
   }
 };
