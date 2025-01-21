@@ -156,14 +156,14 @@
   });
 })();
 
-document.addEventListener("keydown", function (event) {
-  // Ngăn chặn nhấn F12
-  if (event.key === "F12") {
-    event.preventDefault();
-  }
-});
+// document.addEventListener("keydown", function (event) {
+//   // Ngăn chặn nhấn F12
+//   if (event.key === "F12") {
+//     event.preventDefault();
+//   }
+// });
 
-// Ngăn chặn mở DevTools bằng chuột
-document.addEventListener("contextmenu", function (event) {
-  event.preventDefault(); // Ngăn mở menu chuột phải
-});
+// // Ngăn chặn mở DevTools bằng chuột
+// document.addEventListener("contextmenu", function (event) {
+//   event.preventDefault(); // Ngăn mở menu chuột phải
+// });

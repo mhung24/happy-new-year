@@ -1,4 +1,4 @@
-@media (max-width: 413px) {
+@media (max-width: 735px) {
   .no_width {
     color: #fff;
     display: flex;
@@ -13,12 +13,12 @@
     display: none;
   }
 
-  #ramdom_lx {
+  .main {
     display: none;
   }
 }
 
-@media (max-width: 736px) {
+@media (min-width: 736px) and (max-width: 1023px) {
   .no_width {
     display: none;
   }
