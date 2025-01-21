@@ -422,7 +422,7 @@ body {
 }
 
 #typing-text {
-  font-size: 22px !important;
+  font-size: 22px;
   text-align: center;
   width: 1616px;
   margin: 0 auto;
@@ -432,4 +432,8 @@ body {
   50% {
     border-color: transparent; /* Ẩn con trỏ */
   }
+}
+
+.no_width {
+  display: none;
 }

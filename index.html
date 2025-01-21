@@ -44,6 +44,7 @@
     />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="ramdom.css" />
+    <link rel="stylesheet" href="reson.css" />
   </head>
   <body
     style="
@@ -95,6 +96,10 @@
       />
     </div>
 
+    <div class="no_width">
+      <p>Vui lòng quay ngang màn hình</p>
+    </div>
+
     <!-- App -->
     <div id="container" class="container dp_none">
       <div class="loading-init">
@@ -112,7 +117,7 @@
               id="wrap_redirect_ramdom"
               style="text-align: center; margin-top: 20px"
             >
-              <p style="font-size: 22px">Bạn có muốn nhận nó không ?</p>
+              <p class="yes_or_no">Bạn có muốn nhận nó không ?</p>
 
               <div class="wrap_btn" style="margin-top: 20px">
                 <button
@@ -229,6 +234,7 @@
           <ul class="wheel"></ul>
         </span>
         <button class="btn--wheel">Quay thưởng</button>
+        <h1 id="ip">Địa chỉ IP của bạn sẽ hiển thị ở đây</h1>
       </section>
 
       <div class="wrap_msg" id="wrap_msg">
@@ -252,5 +258,6 @@
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js"></script>
     <script src="./index.js"></script>
     <script src="./main.js"></script>
+    <script src="./data.js"></script>
   </body>
 </html>
