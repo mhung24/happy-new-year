@@ -2394,8 +2394,23 @@ username.addEventListener("keydown", (event) => {
   }
 });
 
+const headerCmnm = document.getElementById("header_cmnm");
+const bb = document.getElementById("typing-text");
+
+const deleteLetter = () => {
+  headerCmnm.style.display = "none";
+  bb.style.display = "none";
+  a.style.display = "none";
+};
+
+const callDeleteLetter = () => {
+  setTimeout(deleteLetter, 4000);
+};
+
 const noClick = () => {
   a.style.display = "block";
+  db_none.style.display = "none";
+  callDeleteLetter();
 };
 const rdlx = document.getElementById("ramdom_lx");
 

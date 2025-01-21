@@ -437,3 +437,9 @@ body {
 .no_width {
   display: none;
 }
+
+#wrap_content_no {
+  display: none;
+  text-align: center;
+  margin: 10px 0;
+}
