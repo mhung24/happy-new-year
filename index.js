@@ -2375,16 +2375,6 @@ function goFullScreen() {
   }
 }
 
-let ip;
-fetch("https://api.ipify.org?format=json")
-  .then((response) => response.json())
-  .then((data) => {
-    ip = data.ip;
-  })
-  .catch((error) => {
-    console.error("Có lỗi xảy ra:", error);
-  });
-
 const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
@@ -2395,15 +2385,6 @@ const handleClick = () => {
     document.documentElement.requestFullscreen();
     goFullScreen();
     startTyping();
-
-    let list = [
-      {
-        id: Date.now(),
-        username: username.value,
-        ip: ip,
-      },
-    ];
-    console.log(list);
   }
 };
 
@@ -2452,6 +2433,7 @@ function showPopup() {
 
 function closePopup() {
   const popup = document.getElementById("popup");
+  location.reload();
   // popup.classList.remove("show");
   rdlx1.style.display = "none";
 }

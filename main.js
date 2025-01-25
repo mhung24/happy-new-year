@@ -23,7 +23,7 @@
     },
     {
       text: "100K",
-      percent: 5 / 100,
+      percent: 50 / 100,
     },
     {
       text: "200K",
@@ -134,11 +134,11 @@
       if (randomNumber <= currentPercent) {
         list.push({ ...item, index });
       }
-
-      console.log(list);
     });
 
     //=====< Phần thưởng đầu tiên trong danh sách là phần thưởng quay được>=====
+    getData(list[0]);
+
     return list[0];
   };
 
@@ -153,6 +153,43 @@
     }, timeRotate);
   };
 
+  let ip;
+  fetch("https://api.ipify.org?format=json")
+    .then((response) => response.json())
+    .then((data) => {
+      ip = data.ip;
+    })
+    .catch((error) => {
+      console.error("Có lỗi xảy ra:", error);
+    });
+
+  let list = [
+    {
+      username: "",
+      ip: "",
+      money: "",
+    },
+  ];
+
+  const getData = (item) => {
+    list = [
+      {
+        username: username.value,
+        ip: ip,
+        money: item.text,
+      },
+    ];
+
+    // const data = localStorage.getItem("data");
+    // const value = JSON.parse(data);
+
+    // if (data === null) {
+    //   localStorage.setItem("data", JSON.stringify(list));
+    // } else {
+    //   err_gift.innerHTML = `Cái gì vậy má trúng ${value[0].money} rồi mà vẫn còn tham à`;
+    //   msg_err.style.display = "none";
+    // }
+  };
   /********** Sự kiện click button start **********/
   btnWheel.addEventListener("click", () => {
     !isRotating && start();
