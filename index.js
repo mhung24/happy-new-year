@@ -2347,7 +2347,7 @@ function type(text) {
       if (index === text.length) {
         db_none.style.display = "block";
       } else db_none.style.display = "none";
-      setTimeout(typeNext, 0); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
+      setTimeout(typeNext, 50); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
     }
   }
   typeNext();
