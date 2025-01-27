@@ -214,10 +214,10 @@ ul {
 
   .btn--wheel {
     position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 142px;
-    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    top: 134px;
+    font-size: 12px;
     padding: 0;
   }
 }

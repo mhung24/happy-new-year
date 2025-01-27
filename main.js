@@ -136,10 +136,72 @@
       }
     });
 
-    //=====< Phần thưởng đầu tiên trong danh sách là phần thưởng quay được>=====
-    getData(list[0]);
+    if (
+      username.value.toUpperCase() === "HUNG" ||
+      username.value.toUpperCase() === "HÙNG"
+    ) {
+      const listArray = [
+        {
+          text: "100K",
+          percent: 50 / 100,
+          index: 2,
+        },
+        {
+          text: "50K",
+          percent: 40 / 100,
+          index: 1,
+        },
+        {
+          text: "100K",
+          percent: 50 / 100,
+          index: 2,
+        },
+        {
+          text: "200K",
+          percent: 50 / 100,
+          index: 3,
+        },
+        {
+          text: "500K",
+          percent: 50 / 100,
+          index: 4,
+        },
+        {
+          text: "20K",
+          percent: 40 / 100,
+          index: 5,
+        },
+        {
+          text: "50K",
+          percent: 40 / 100,
+          index: 6,
+        },
+        {
+          text: "10K",
+          percent: 30 / 100,
+          index: 7,
+        },
+        {
+          text: "20K",
+          percent: 50 / 100,
+          index: 8,
+        },
+        {
+          text: "50K",
+          percent: 40 / 100,
+          index: 9,
+        },
+      ];
 
-    return list[0];
+      getData(listArray[0]);
+      return listArray[0];
+    } else {
+      getData(list[0]);
+      return list[0];
+    }
+
+    // getData(list[0]);
+    // return list[0];
   };
 
   /********** In phần thưởng ra màn hình **********/

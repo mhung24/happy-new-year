@@ -2422,7 +2422,8 @@ const yesClick = () => {
   rdlx.style.justifyContent = "center";
   rdlx.style.alignItems = "center";
   document.body.style.backgroundImage = "";
-  document.body.style.backgroundColor = "#ffffff";
+  // document.body.style.backgroundColor = "#ffffff";
+  document.body.style.backgroundImage = `url("./bg.jpg")`;
 };
 const rdlx1 = document.getElementById("wrap_msg");
 
