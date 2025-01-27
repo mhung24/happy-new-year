@@ -160,6 +160,68 @@ ul {
   }
 }
 
+@media (min-width: 500px) and (max-width: 735px) {
+  :root {
+    --size-wheel: 16rem;
+  }
+
+  ul {
+    width: var(--size-wheel);
+    height: var(--size-wheel);
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  span {
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem;
+  }
+  span::before {
+    content: "";
+    position: absolute;
+    top: 0rem;
+    left: 50%;
+    border-left: 1rem solid transparent !important;
+    border-right: 1rem solid transparent !important;
+    border-top: 2rem solid rgb(255, 217, 0) !important;
+    z-index: 2;
+    transform: translateX(-50%);
+    animation: arrow ease-out 0.6s infinite;
+  }
+
+  .msg {
+    margin: 0;
+  }
+  .popup {
+    background: #fff;
+    border: 2px solid #d32f2f;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    width: 300px;
+    opacity: 0; /* Bắt đầu với độ mờ */
+    transform: translateY(-20px); /* Bắt đầu ở vị trí cao hơn */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Hiệu ứng chuyển tiếp */
+    width: 100%;
+    /* height: 100%; */
+    color: #000;
+    /* line-height: 40px; */
+  }
+
+  .btn--wheel {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 142px;
+    font-size: 16px;
+    padding: 0;
+  }
+}
+
 span {
   display: inline-block;
   position: relative;
