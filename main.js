@@ -199,9 +199,6 @@
       getData(list[0]);
       return list[0];
     }
-
-    // getData(list[0]);
-    // return list[0];
   };
 
   /********** In phần thưởng ra màn hình **********/
@@ -241,6 +238,15 @@
         money: item.text,
       },
     ];
+
+    // const yesClick = () => {
+    //   const data = username.value;
+    //   window.location.href = `https://mhung24.github.io/ramdom/?data=${encodeURIComponent(
+    //     data
+    //   )}`;
+    // };
+
+    // yesClick();
 
     // const data = localStorage.getItem("data");
     // const value = JSON.parse(data);
