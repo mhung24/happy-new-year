@@ -2336,55 +2336,32 @@ const originalText = `Năm mới đến rồi! Chúc {name} và gia đình có n
 let index = 0;
 // let os = "Hệ điều hành không xác định";
 
-function type(text) {
-  index = 0; // Đặt lại chỉ số index
-  document.getElementById("typing-text").innerHTML = ""; // Xóa nội dung trước đó
+// function type(text) {
+//   index = 0; // Đặt lại chỉ số index
+//   document.getElementById("typing-text").innerHTML = ""; // Xóa nội dung trước đó
 
-  function typeNext() {
-    if (index < text.length) {
-      document.getElementById("typing-text").innerHTML += text.charAt(index);
-      index++;
+//   function typeNext() {
+//     if (index < text.length) {
+//       document.getElementById("typing-text").innerHTML += text.charAt(index);
+//       index++;
 
-      console.log(index, text.length);
+//       console.log(index, text.length);
 
-      if (index === text.length) {
-        db_none.style.display = "block";
-      } else db_none.style.display = "none";
-      setTimeout(typeNext, 0); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
-    }
-  }
-  typeNext();
-}
-
-// function getOS() {
-//   const userAgent = window.navigator.userAgent;
-
-//   if (userAgent.indexOf("Win") !== -1) {
-//     os = "Windows";
-//   } else if (userAgent.indexOf("Mac") !== -1) {
-//     os = "macOS";
-//   } else if (
-//     userAgent.indexOf("X11") !== -1 ||
-//     userAgent.indexOf("Linux") !== -1
-//   ) {
-//     os = "Linux";
-//   } else if (userAgent.indexOf("Android") !== -1) {
-//     os = "Android";
-//   } else if (userAgent.indexOf("like Mac") !== -1) {
-//     os = "iOS";
+//       if (index === text.length) {
+//         db_none.style.display = "block";
+//       } else db_none.style.display = "none";
+//       setTimeout(typeNext, 0); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
+//     }
 //   }
-
-//   return os;
+//   typeNext();
 // }
 
-// getOS();
-
 // Hàm để bắt đầu hiệu ứng đánh máy với tên nhập từ ô input
-function startTyping() {
-  const name = username.value || "Bạn"; // Lấy tên từ ô input
-  const text = originalText.replace("{name}", name); // Thay thế {name} bằng tên nhập
-  type(text); // Gọi hàm đánh máy với chuỗi mới
-}
+// function startTyping() {
+//   const name = username.value || "Bạn"; // Lấy tên từ ô input
+//   const text = originalText.replace("{name}", name); // Thay thế {name} bằng tên nhập
+//   type(text); // Gọi hàm đánh máy với chuỗi mới
+// }
 
 function goFullScreen() {
   if (document.documentElement.requestFullscreen) {
@@ -2407,11 +2384,11 @@ const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
   } else {
-    startTyping();
+    // startTyping();
     goFullScreen();
     container.style.display = "flex";
     wrap_input.style.display = "none";
-    nameRd.innerHTML = `Hi ${username.value}`;
+    // nameRd.innerHTML = `Hi ${username.value}`;
     document.documentElement.requestFullscreen();
   }
 };
