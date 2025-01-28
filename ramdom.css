@@ -54,12 +54,12 @@ ul {
     font-size: 16px;
   }
 
-  .wrap_wheel {
+  span {
     display: inline-block;
     position: relative;
     padding: 0.5rem;
   }
-  .wrap_wheel::before {
+  span::before {
     content: "";
     position: absolute;
     top: 0rem;
@@ -112,12 +112,12 @@ ul {
     font-size: 12px;
   }
 
-  .wrap_wheel {
+  span {
     display: inline-block;
     position: relative;
     padding: 0.5rem;
   }
-  .wrap_wheel::before {
+  span::before {
     content: "";
     position: absolute;
     top: 0rem;
@@ -128,9 +128,6 @@ ul {
     z-index: 2;
     transform: translateX(-50%);
     animation: arrow ease-out 0.6s infinite;
-  }
-  .typing-container {
-    width: 800px;
   }
 
   .msg {
@@ -177,12 +174,12 @@ ul {
     font-size: 12px;
   }
 
-  .wrap_wheel {
+  span {
     display: inline-block;
     position: relative;
     padding: 0.5rem;
   }
-  .wrap_wheel::before {
+  span::before {
     content: "";
     position: absolute;
     top: 0rem;
@@ -243,7 +240,7 @@ span {
   }
 }
 
-.wrap_wheel::after {
+span::after {
   content: "";
   width: 2rem;
   height: 2rem;
