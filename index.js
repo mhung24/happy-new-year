@@ -2344,12 +2344,10 @@ function type(text) {
       document.getElementById("typing-text").innerHTML += text.charAt(index);
       index++;
 
-      console.log(index, text.length);
-
       if (index === text.length) {
         db_none.style.display = "block";
       } else db_none.style.display = "none";
-      setTimeout(typeNext, 0); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
+      setTimeout(typeNext, 50); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
     }
   }
   typeNext();
@@ -2381,12 +2379,12 @@ const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
   } else {
-    startTyping();
-    // goFullScreen();
     container.style.display = "flex";
     wrap_input.style.display = "none";
     nameRd.innerHTML = `Hi ${username.value}`;
     document.documentElement.requestFullscreen();
+    goFullScreen();
+    startTyping();
   }
 };
 
@@ -2412,7 +2410,6 @@ const callDeleteLetter = () => {
 const noClick = () => {
   a.style.display = "block";
   db_none.style.display = "none";
-  document.getElementById("typing-text-ios").style.display = "none";
   callDeleteLetter();
 };
 const rdlx = document.getElementById("ramdom_lx");
@@ -2425,8 +2422,8 @@ const yesClick = () => {
   rdlx.style.justifyContent = "center";
   rdlx.style.alignItems = "center";
   document.body.style.backgroundImage = "";
-  document.body.style.backgroundColor = "#ffffff";
-  // document.body.style.backgroundImage = `url("./bg.jpg")`;
+  // document.body.style.backgroundColor = "#ffffff";
+  document.body.style.backgroundImage = `url("./bg.jpg")`;
 };
 const rdlx1 = document.getElementById("wrap_msg");
 
