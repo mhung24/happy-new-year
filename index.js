@@ -2345,7 +2345,7 @@ function type(text) {
       document.getElementById("typing-text").innerHTML += text.charAt(index);
       index++;
 
-      if (index === text.length && os !== "macOS" && os !== "iOS") {
+      if (index === text.length) {
         db_none.style.display = "block";
       } else db_none.style.display = "none";
       setTimeout(typeNext, 50); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
