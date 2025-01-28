@@ -2354,28 +2354,28 @@ function type(text) {
   typeNext();
 }
 
-function getOS() {
-  const userAgent = window.navigator.userAgent;
+// function getOS() {
+//   const userAgent = window.navigator.userAgent;
 
-  if (userAgent.indexOf("Win") !== -1) {
-    os = "Windows";
-  } else if (userAgent.indexOf("Mac") !== -1) {
-    os = "macOS";
-  } else if (
-    userAgent.indexOf("X11") !== -1 ||
-    userAgent.indexOf("Linux") !== -1
-  ) {
-    os = "Linux";
-  } else if (userAgent.indexOf("Android") !== -1) {
-    os = "Android";
-  } else if (userAgent.indexOf("like Mac") !== -1) {
-    os = "iOS";
-  }
+//   if (userAgent.indexOf("Win") !== -1) {
+//     os = "Windows";
+//   } else if (userAgent.indexOf("Mac") !== -1) {
+//     os = "macOS";
+//   } else if (
+//     userAgent.indexOf("X11") !== -1 ||
+//     userAgent.indexOf("Linux") !== -1
+//   ) {
+//     os = "Linux";
+//   } else if (userAgent.indexOf("Android") !== -1) {
+//     os = "Android";
+//   } else if (userAgent.indexOf("like Mac") !== -1) {
+//     os = "iOS";
+//   }
 
-  return os;
-}
+//   return os;
+// }
 
-getOS();
+// getOS();
 
 // Hàm để bắt đầu hiệu ứng đánh máy với tên nhập từ ô input
 function startTyping() {
@@ -2405,19 +2405,6 @@ const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
   } else {
-    // if (os === "macOS" || os === "iOS") {
-    //   container.style.display = "flex";
-    //   wrap_input.style.display = "none";
-    //   ios.style.width = "100%";
-    //   ios.style.fontSize = "12px";
-    //   ios.style.padding = "0 12px";
-    //   document.getElementById("typing-text-ios-name").innerHTML = "Banj";
-    //   document.getElementById("typing-text-ios-name").style.padding = 0;
-    //   nameRd.innerHTML = `Hi ${username.value}`;
-    // } else {
-
-    // }
-
     document.getElementById("typing-text-ios").style.display = "none";
     startTyping();
     goFullScreen();
