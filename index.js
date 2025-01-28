@@ -2331,34 +2331,34 @@ window.onload = () => {
 a.style.display = "none";
 container.style.display = "none";
 
-const originalText = `Năm mới đến rồi! Chúc {name} và gia đình có những ngày Tết ấm áp, vui vẻ và an lành bên nhau. Hy vọng trong năm mới, công việc của bạn sẽ thuận lợi, học tập suôn sẻ, và bạn sẽ đạt được nhiều thành công trong mọi lĩnh vực! Nhân dịp Tết có quà nhỏ, mong rằng nó sẽ mang lại tài lộc cho bạn!`;
+const originalText = ``;
 
-let index = 0;
+// let index = 0;
 
-function type(text) {
-  index = 0; // Đặt lại chỉ số index
-  document.getElementById("typing-text").innerHTML = ""; // Xóa nội dung trước đó
+// function type(text) {
+//   index = 0; // Đặt lại chỉ số index
+//   document.getElementById("typing-text").innerHTML = ""; // Xóa nội dung trước đó
 
-  function typeNext() {
-    if (index < text.length) {
-      document.getElementById("typing-text").innerHTML += text.charAt(index);
-      index++;
+//   function typeNext() {
+//     if (index < text.length) {
+//       document.getElementById("typing-text").innerHTML += text.charAt(index);
+//       index++;
 
-      if (index === text.length) {
-        db_none.style.display = "block";
-      } else db_none.style.display = "none";
-      setTimeout(typeNext, 50); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
-    }
-  }
-  typeNext();
-}
+//       if (index === text.length) {
+//         db_none.style.display = "block";
+//       } else db_none.style.display = "none";
+//       setTimeout(typeNext, 50); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
+//     }
+//   }
+//   typeNext();
+// }
 
 // Hàm để bắt đầu hiệu ứng đánh máy với tên nhập từ ô input
-function startTyping() {
-  const name = username.value || "Bạn"; // Lấy tên từ ô input
-  const text = originalText.replace("{name}", name); // Thay thế {name} bằng tên nhập
-  type(text); // Gọi hàm đánh máy với chuỗi mới
-}
+// function startTyping() {
+//   const name = username.value || "Bạn"; // Lấy tên từ ô input
+//   const text = originalText.replace("{name}", name); // Thay thế {name} bằng tên nhập
+//   type(text); // Gọi hàm đánh máy với chuỗi mới
+// }
 
 function goFullScreen() {
   if (document.documentElement.requestFullscreen) {
@@ -2381,10 +2381,10 @@ const handleClick = () => {
   } else {
     container.style.display = "flex";
     wrap_input.style.display = "none";
+    document.getElementById("typing-text-sp").innerHTML = username.value;
     nameRd.innerHTML = `Hi ${username.value}`;
     document.documentElement.requestFullscreen();
     goFullScreen();
-    startTyping();
   }
 };
 
