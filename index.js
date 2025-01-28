@@ -2334,6 +2334,7 @@ container.style.display = "none";
 const originalText = `Năm mới đến rồi! Chúc {name} và gia đình có những ngày Tết ấm áp, vui vẻ và an lành bên nhau. Hy vọng trong năm mới, công việc của bạn sẽ thuận lợi, học tập suôn sẻ, và bạn sẽ đạt được nhiều thành công trong mọi lĩnh vực! Nhân dịp Tết có quà nhỏ, mong rằng nó sẽ mang lại tài lộc cho bạn!`;
 
 let index = 0;
+let os = "Hệ điều hành không xác định";
 
 function type(text) {
   index = 0; // Đặt lại chỉ số index
@@ -2344,7 +2345,7 @@ function type(text) {
       document.getElementById("typing-text").innerHTML += text.charAt(index);
       index++;
 
-      if (index === text.length) {
+      if (index === text.length && os !== "macOS" && os !== "iOS") {
         db_none.style.display = "block";
       } else db_none.style.display = "none";
       setTimeout(typeNext, 50); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
@@ -2352,7 +2353,6 @@ function type(text) {
   }
   typeNext();
 }
-let os = "Hệ điều hành không xác định";
 
 function getOS() {
   const userAgent = window.navigator.userAgent;
@@ -2405,28 +2405,23 @@ const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
   } else {
-    container.style.display = "flex";
-    wrap_input.style.display = "none";
-    nameRd.innerHTML = `Hi ${username.value}`;
-    document.documentElement.requestFullscreen();
     if (os === "macOS" || os === "iOS") {
-      ios.style.width = "41%";
+      container.style.display = "flex";
+      wrap_input.style.display = "none";
+      ios.style.width = "100%";
       ios.style.fontSize = "12px";
       ios.style.padding = "0 12px";
-      document.getElementById("typing-text-ios-name").innerHTML =
-        username.value;
+      document.getElementById("typing-text-ios-name").innerHTML = "Banj";
       document.getElementById("typing-text-ios-name").style.padding = 0;
-
-      setTimeout(
-        () => {
-          alert("wrap_redirect_ramdom");
-        },
-
-        1000
-      );
+      nameRd.innerHTML = `Hi ${username.value}`;
     } else {
+      document.getElementById("typing-text-ios").style.display = "none";
       startTyping();
       goFullScreen();
+      container.style.display = "flex";
+      wrap_input.style.display = "none";
+      nameRd.innerHTML = `Hi ${username.value}`;
+      document.documentElement.requestFullscreen();
     }
   }
 };
@@ -2453,6 +2448,7 @@ const callDeleteLetter = () => {
 const noClick = () => {
   a.style.display = "block";
   db_none.style.display = "none";
+  document.getElementById("typing-text-ios").style.display = "none";
   callDeleteLetter();
 };
 const rdlx = document.getElementById("ramdom_lx");
