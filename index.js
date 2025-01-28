@@ -2352,6 +2352,30 @@ function type(text) {
   }
   typeNext();
 }
+let os = "Hệ điều hành không xác định";
+
+function getOS() {
+  const userAgent = window.navigator.userAgent;
+
+  if (userAgent.indexOf("Win") !== -1) {
+    os = "Windows";
+  } else if (userAgent.indexOf("Mac") !== -1) {
+    os = "macOS";
+  } else if (
+    userAgent.indexOf("X11") !== -1 ||
+    userAgent.indexOf("Linux") !== -1
+  ) {
+    os = "Linux";
+  } else if (userAgent.indexOf("Android") !== -1) {
+    os = "Android";
+  } else if (userAgent.indexOf("like Mac") !== -1) {
+    os = "iOS";
+  }
+
+  return os;
+}
+
+getOS();
 
 // Hàm để bắt đầu hiệu ứng đánh máy với tên nhập từ ô input
 function startTyping() {
@@ -2375,6 +2399,8 @@ function goFullScreen() {
   }
 }
 
+const ios = document.getElementById("typing-text-ios");
+
 const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
@@ -2383,8 +2409,25 @@ const handleClick = () => {
     wrap_input.style.display = "none";
     nameRd.innerHTML = `Hi ${username.value}`;
     document.documentElement.requestFullscreen();
-    goFullScreen();
-    startTyping();
+    if (os === "macOS" || os === "iOS") {
+      ios.style.width = "41%";
+      ios.style.fontSize = "12px";
+      ios.style.padding = "0 12px";
+      document.getElementById("typing-text-ios-name").innerHTML =
+        username.value;
+      document.getElementById("typing-text-ios-name").style.padding = 0;
+
+      setTimeout(
+        () => {
+          alert("wrap_redirect_ramdom");
+        },
+
+        1000
+      );
+    } else {
+      startTyping();
+      goFullScreen();
+    }
   }
 };
 
