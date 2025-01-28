@@ -2386,7 +2386,7 @@ const handleClick = () => {
     container.style.display = "flex";
     wrap_input.style.display = "none";
     nameRd.innerHTML = `Hi ${username.value}`;
-    document.documentElement.requestFullscreen();
+    // document.documentElement.requestFullscreen();
   }
 };
 
