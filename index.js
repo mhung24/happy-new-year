@@ -2334,7 +2334,7 @@ container.style.display = "none";
 const originalText = `Năm mới đến rồi! Chúc {name} và gia đình có những ngày Tết ấm áp, vui vẻ và an lành bên nhau. Hy vọng trong năm mới, công việc của bạn sẽ thuận lợi, học tập suôn sẻ, và bạn sẽ đạt được nhiều thành công trong mọi lĩnh vực! Nhân dịp Tết có quà nhỏ, mong rằng nó sẽ mang lại tài lộc cho bạn!`;
 
 let index = 0;
-let os = "Hệ điều hành không xác định";
+// let os = "Hệ điều hành không xác định";
 
 function type(text) {
   index = 0; // Đặt lại chỉ số index
@@ -2345,10 +2345,12 @@ function type(text) {
       document.getElementById("typing-text").innerHTML += text.charAt(index);
       index++;
 
+      console.log(index, text.length);
+
       if (index === text.length) {
         db_none.style.display = "block";
       } else db_none.style.display = "none";
-      setTimeout(typeNext, 50); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
+      setTimeout(typeNext, 0); // Thay đổi thời gian để điều chỉnh tốc độ đánh máy
     }
   }
   typeNext();
@@ -2405,7 +2407,6 @@ const handleClick = () => {
   if (username.value === "") {
     alert("Nhập tên của bạn");
   } else {
-    document.getElementById("typing-text-ios").style.display = "none";
     startTyping();
     goFullScreen();
     container.style.display = "flex";
