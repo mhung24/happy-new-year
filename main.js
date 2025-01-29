@@ -249,8 +249,8 @@
         },
       ];
 
-      getData(listArray[0]);
-      return listArray[0];
+      getData(list[0]);
+      return list[0];
     }
 
     // getData(list[0]);
