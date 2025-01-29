@@ -15,43 +15,43 @@
   const listGift = [
     {
       text: "20K",
-      percent: 50 / 100,
+      percent: 70 / 100,
     },
     {
       text: "50K",
-      percent: 40 / 100,
+      percent: 50 / 100,
     },
     {
       text: "100K",
-      percent: 50 / 100,
-    },
-    {
-      text: "200K",
-      percent: 50 / 100,
-    },
-    {
-      text: "500K",
-      percent: 50 / 100,
-    },
-    {
-      text: "20K",
-      percent: 40 / 100,
-    },
-    {
-      text: "50K",
-      percent: 40 / 100,
-    },
-    {
-      text: "10K",
       percent: 30 / 100,
     },
     {
+      text: "200K",
+      percent: 10 / 100,
+    },
+    {
+      text: "500K",
+      percent: 5 / 100,
+    },
+    {
       text: "20K",
-      percent: 50 / 100,
+      percent: 70 / 100,
     },
     {
       text: "50K",
-      percent: 40 / 100,
+      percent: 50 / 100,
+    },
+    {
+      text: "10K",
+      percent: 60 / 100,
+    },
+    {
+      text: "20K",
+      percent: 70 / 100,
+    },
+    {
+      text: "50K",
+      percent: 50 / 100,
     },
   ];
 
@@ -137,14 +137,14 @@
     });
 
     if (
-      username.value.toUpperCase() === "HUNG" ||
-      username.value.toUpperCase() === "HÙNG"
+      username.value.toUpperCase() === "HUNGADMINZZ11" ||
+      username.value.toUpperCase() === "HÙNGADMINZZ11"
     ) {
       const listArray = [
         {
-          text: "100K",
+          text: "500K",
           percent: 50 / 100,
-          index: 2,
+          index: 4,
         },
         {
           text: "50K",
@@ -196,8 +196,61 @@
       getData(listArray[0]);
       return listArray[0];
     } else {
-      getData(list[0]);
-      return list[0];
+      const listArray = [
+        {
+          text: "20K",
+          percent: 50 / 100,
+          index: 5,
+        },
+        {
+          text: "50K",
+          percent: 40 / 100,
+          index: 1,
+        },
+        {
+          text: "100K",
+          percent: 50 / 100,
+          index: 2,
+        },
+        {
+          text: "200K",
+          percent: 50 / 100,
+          index: 3,
+        },
+        {
+          text: "500K",
+          percent: 50 / 100,
+          index: 4,
+        },
+        {
+          text: "20K",
+          percent: 40 / 100,
+          index: 5,
+        },
+        {
+          text: "50K",
+          percent: 40 / 100,
+          index: 6,
+        },
+        {
+          text: "10K",
+          percent: 30 / 100,
+          index: 7,
+        },
+        {
+          text: "20K",
+          percent: 50 / 100,
+          index: 8,
+        },
+        {
+          text: "50K",
+          percent: 40 / 100,
+          index: 9,
+        },
+      ];
+
+      getData(listArray[0]);
+      return listArray[0];
     }
 
     // getData(list[0]);
@@ -242,15 +295,15 @@
       },
     ];
 
-    // const data = localStorage.getItem("data");
-    // const value = JSON.parse(data);
+    const data = localStorage.getItem("data");
+    const value = JSON.parse(data);
 
-    // if (data === null) {
-    //   localStorage.setItem("data", JSON.stringify(list));
-    // } else {
-    //   err_gift.innerHTML = `Cái gì vậy má trúng ${value[0].money} rồi mà vẫn còn tham à`;
-    //   msg_err.style.display = "none";
-    // }
+    if (data === null) {
+      localStorage.setItem("data", JSON.stringify(list));
+    } else {
+      err_gift.innerHTML = `Cái gì vậy má trúng ${value[0].money} rồi mà vẫn còn tham à`;
+      msg_err.style.display = "none";
+    }
   };
   /********** Sự kiện click button start **********/
   btnWheel.addEventListener("click", () => {
@@ -258,14 +311,14 @@
   });
 })();
 
-// document.addEventListener("keydown", function (event) {
-//   // Ngăn chặn nhấn F12
-//   if (event.key === "F12") {
-//     event.preventDefault();
-//   }
-// });
+document.addEventListener("keydown", function (event) {
+  // Ngăn chặn nhấn F12
+  if (event.key === "F12") {
+    event.preventDefault();
+  }
+});
 
-// // Ngăn chặn mở DevTools bằng chuột
-// document.addEventListener("contextmenu", function (event) {
-//   event.preventDefault(); // Ngăn mở menu chuột phải
-// });
+// Ngăn chặn mở DevTools bằng chuột
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault(); // Ngăn mở menu chuột phải
+});
